@@ -1,0 +1,74 @@
+/* UserDetailsCard.css */
+
+.user-card-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 600px; /* Limits the width for better readability */
+  margin: 40px auto; /* Centers the card horizontally */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Soft rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #e0e0e0;
+}
+
+.loading-message {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.card-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff; /* A nice highlight */
+  padding-bottom: 15px;
+}
+
+.card-section {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eee; /* Light separator between sections */
+}
+
+.card-section:last-child {
+  border-bottom: none; /* No border for the last section */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section-title {
+  color: #007bff; /* Primary color for section titles */
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.user-card-container p {
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.user-card-container p strong {
+  color: #333; /* Make labels stand out a bit more */
+  display: inline-block; /* Helps align label-value pairs */
+  min-width: 100px; /* Gives labels a consistent width */
+}
+
+.password-warning {
+  background-color: #fff3cd; /* Light yellow background */
+  border: 1px solid #ffeeba; /* Yellow border */
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 25px;
+  color: #856404; /* Darker yellow text */
+}
+
+.password-warning .section-title {
+  color: #856404; /* Match text color */
+}

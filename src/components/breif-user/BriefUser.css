@@ -1,0 +1,196 @@
+body {
+  font-family: 'Poppins', sans-serif; /* Ensure Poppins font is linked in index.html */
+  background-color: #f8f9fa; /* Light background for the whole page */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container for the entire BriefUser section */
+.main-briefuser-container {
+  max-width: 1200px; /* Limit overall width for better presentation */
+  margin: 50px auto; /* Center the container with vertical spacing */
+  padding: 20px;
+  text-align: center; /* Center the main title */
+}
+
+/* Styling for the main title */
+.main-briefuser-container h1 {
+  font-size: 2.8em; /* Large, impactful title */
+  color: #2c3e50; /* Dark blue-gray for strong contrast */
+  margin-bottom: 40px; /* Space below the title */
+  font-weight: 700; /* Bolder title */
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Underline effect for the main title */
+.main-briefuser-container h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 120px; /* Wider underline */
+  height: 5px;
+  background-color: #4CAF50; /* Primary green accent */
+  border-radius: 3px;
+}
+
+/* Container for the grid of user cards */
+.briefuser-container {
+  display: grid;
+  /* Responsive grid: 1 column on small screens, 2 on medium, 3 on large */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally in the grid */
+  padding: 20px 0; /* Vertical padding */
+}
+
+/* Styling for individual user cards */
+.briefuser-card {
+  background-color: #ffffff;
+  border-radius: 12px; /* Soft rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  padding: 25px;
+  text-align: left; /* Align text within the card to the left */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push button to bottom */
+  min-height: 220px; /* Ensure consistent card height */
+}
+
+/* Hover effect for the cards */
+.briefuser-card:hover {
+  transform: translateY(-8px); /* Lift the card slightly */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+/* Styling for the "DETAIL" heading within the card */
+.briefuser-card h4 {
+  font-size: 1.1em;
+  color: #888; /* Muted color for the detail label */
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-transform: uppercase; /* Uppercase for a subtle label */
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #eee; /* Light separator */
+  padding-bottom: 10px;
+}
+
+/* Styling for user data paragraphs */
+.briefuser-card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Styling for the labels within paragraphs */
+.briefuser-card p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Specific styling for username, email, name for consistent spacing */
+.briefuser-card .username,
+.briefuser-card .email,
+.briefuser-card .name {
+  margin-bottom: 12px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+/* Container for buttons */
+.briefuser-card .buttons {
+  margin-top: 20px; /* Space above the button */
+  text-align: right; /* Align button to the right */
+}
+
+/* Styling for the "Go" button */
+.briefuser-card button {
+  background-color: #4CAF50; /* Primary green button */
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px; /* Rounded button corners */
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2); /* Subtle shadow for the button */
+}
+
+.briefuser-card button:hover {
+  background-color: #43a047; /* Slightly darker green on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3); /* Enhanced shadow on hover */
+}
+
+.briefuser-card button:active {
+  transform: translateY(0); /* Press effect */
+  box-shadow: 0 2px 5px rgba(76, 175, 80, 0.2);
+}
+
+/* Loading message styling */
+.loading-message {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5em;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .main-briefuser-container h1 {
+    font-size: 2em; /* Adjust title size for smaller screens */
+  }
+
+  .briefuser-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Allow smaller cards */
+    gap: 20px; /* Reduce gap */
+    padding: 10px;
+  }
+
+  .briefuser-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-briefuser-container {
+    margin: 30px auto;
+    padding: 10px;
+  }
+
+  .main-briefuser-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+
+  .briefuser-container {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+    gap: 15px;
+  }
+
+  .briefuser-card {
+    padding: 15px;
+  }
+
+  .briefuser-card h4 {
+    font-size: 1em;
+  }
+
+  .briefuser-card p {
+    font-size: 0.95em;
+  }
+
+  .briefuser-card button {
+    padding: 8px 20px;
+    font-size: 0.9em;
+  }
+}
