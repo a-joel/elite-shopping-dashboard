@@ -1,0 +1,12 @@
+.form-container {
+        display: flex;
+        background: #e1e0e0;
+        margin: 50px;
+        width: 100%;
+        box-shadow: 0 0 40px #e1e0e0;
+        padding: 30px;
+}
+
+.form-container input {
+        width: 500px;
+}

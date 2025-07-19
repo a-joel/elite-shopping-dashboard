@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './BriefUser.css'
 import { Link, useNavigate } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 // const {id} = useParams();
 
 const id = 2;
@@ -41,9 +41,15 @@ function BriefUser() {
 
   console.log("Users:", users);
   
-  if(loading) {
-    return <div>Loading...</div>;
-  }
+if(loading) {
+  return (
+    <div>
+      <div className="spinner-grow" style={{ width: '3rem', height: '3rem' }} role="status">
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  );
+}
 
   return (
     <div>

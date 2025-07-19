@@ -1,0 +1,27 @@
+.crud-main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 100px 0;
+        gap: 30px;
+}
+
+.crud-main-container h2 {
+        color: rgb(255, 145, 0);
+}
+
+.crud-main-container button {
+        padding: 17px;
+        border-radius: 40px;
+        width: 400px;
+        border: none;
+        background-color: rgb(60, 83, 233);
+        color: #ffffff;
+        font-size: 1.3rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.crud-main-container button:hover {
+        background-color: #0600ae;
+        transform: scale(1.05);
+}

@@ -6,9 +6,16 @@ import Review from "./components/reviews/Review";
 import Footer from "./components/footer/Footer";
 import DetailUser from "./components/detailuser/DetailUser";
 import Company from "./components/comapany/Company";
+import CrudParent from "./components/crudparent/CrudParent"
+import { useSelector } from "react-redux";
+import CrudOperations from "./components/crudoperations/CrudOperations";
+
 export default function App() {
-
-
+  
+  const name = useSelector(state => state.name ?? '');
+    console.log(`This is ${name}`);
+  
+  
   return (
     <div>
       <Routes>
@@ -19,6 +26,7 @@ export default function App() {
               <Navbar />{" "}
               <Hero />
               <Company />
+              <CrudParent />
               <Footer />
             </>
           }
@@ -28,6 +36,8 @@ export default function App() {
         <Route path="/reviews" element={<><Navbar /> <Hero /> <Review /> <Footer /></>} />
 
         <Route path="/customers/:id" element={<><Navbar /> <DetailUser /> <Footer /></>} />
+
+        <Route path="/crud" element={<><Navbar /><CrudOperations /> <Footer /></>} />
       </Routes>
     </div>
   );
