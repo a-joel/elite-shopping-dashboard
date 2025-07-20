@@ -6,3 +6,12 @@ export const changeName = (newName) => ({
 export const increment = () => ({
         type: "INCREMENT"
 })
+
+export const deleteUser = () => ({
+        type: "DELETE"
+})
+
+export const changeEmail = (newEmail) => ({
+        type: "CHANGEEMAIL",
+        payload: newEmail
+})

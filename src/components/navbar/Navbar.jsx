@@ -36,6 +36,7 @@ function Navbar() {
             <Link to={'/'}>Home</Link>
             <Link to={'/customers'}>Customers</Link>
             <Link to={'/reviews'}>Reviews</Link>
+            <Link to={'/crud'}>CRUD</Link>
           </div>
         </div>
       </div>
